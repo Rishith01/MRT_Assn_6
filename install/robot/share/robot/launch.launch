@@ -1,0 +1,10 @@
+<launch>
+    <!-- Launch Ignition Gazebo with the desired world file -->
+    <node name="ignition_gazebo" pkg="ignition_gazebo" type="ignition gazebo">
+        <param name="world" value="$(find robot)/models/models.sdf"/>
+    </node>
+
+    <!-- Add node to move the robot in a circle -->
+    <node name="move_circle_node" pkg="robot" type="moving_circle.py"/>
+</launch>
+

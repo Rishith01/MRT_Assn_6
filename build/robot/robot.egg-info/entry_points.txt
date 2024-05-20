@@ -1,0 +1,3 @@
+[console_scripts]
+moving_circle = robot.moving_circle:main
+

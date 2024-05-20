@@ -1,0 +1,454 @@
+<?xml version="1.0"?>
+<robot name="my_robot">
+
+  <!-- Links -->
+  <link name="chassis">
+    <visual>
+      <geometry>
+        <box size="1.0 0.62 0.25"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="1.0 0.62 0.25"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <link name="left_front_wheel">
+    <visual>
+      <geometry>
+        <cylinder radius="0.175" length="0.1"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.175" length="0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="0.043333" ixy="0.0" ixz="0.0" iyy="0.043333" iyz="0.0" izz="0.08"/>
+    </inertial>
+  </link>
+  
+  <link name="right_front_wheel">
+    <visual>
+      <geometry>
+        <cylinder radius="0.175" length="0.1"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.175" length="0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="0.043333" ixy="0.0" ixz="0.0" iyy="0.043333" iyz="0.0" izz="0.08"/>
+    </inertial>
+  </link>
+  
+  <link name="left_rear_wheel">
+    <visual>
+      <geometry>
+        <cylinder radius="0.175" length="0.1"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.175" length="0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="0.043333" ixy="0.0" ixz="0.0" iyy="0.043333" iyz="0.0" izz="0.08"/>
+    </inertial>
+  </link>
+  
+  <link name="right_rear_wheel">
+    <visual>
+      <geometry>
+        <cylinder radius="0.175" length="0.1"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.175" length="0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="0.043333" ixy="0.0" ixz="0.0" iyy="0.043333" iyz="0.0" izz="0.08"/>
+    </inertial>
+  </link>
+
+
+  <link name="arm_base">
+    <!-- Visual properties -->
+    <visual name="visual">
+        <geometry>
+            <cylinder>
+                <radius>0.025</radius> 
+                <length>0.35</length>
+            </cylinder>
+        </geometry>
+        <material>
+            <ambient>0.0 1.0 0.0 1</ambient>
+            <diffuse>0.0 1.0 0.0 1</diffuse>
+            <specular>0.0 1.0 0.0 1</specular>
+        </material>
+        <!-- Pose relative to parent link -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+
+    <!-- Collision properties -->
+    <collision name="collision">
+        <geometry>
+            <cylinder>
+                <radius>0.025</radius>
+                <length>0.35</length>
+            </cylinder>
+        </geometry>
+        <!-- Pose relative to parent link -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+
+    <!-- Inertial properties -->
+    <inertial>
+        <mass>1</mass>
+        <inertia>
+            <ixx>0.0043333</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0043333</iyy>
+            <iyz>0</iyz>
+            <izz>0.008</izz>
+        </inertia>
+        <!-- Pose relative to link origin -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </inertial>
+</link>
+
+  <link name="arm_hand_2">
+    <!-- Visual properties -->
+    <visual name="visual">
+        <geometry>
+            <cylinder>
+                <radius>0.025</radius> 
+                <length>0.4</length>
+            </cylinder>
+        </geometry>
+        <material>
+            <ambient>0.0 1.0 1.0 1</ambient>
+            <diffuse>0.0 1.0 1.0 1</diffuse>
+            <specular>0.0 1.0 1.0 1</specular>
+        </material>
+        <!-- Pose relative to parent link -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+
+    <!-- Collision properties -->
+    <collision name="collision">
+        <geometry>
+            <cylinder>
+                <radius>0.025</radius>
+                <length>0.4</length>
+            </cylinder>
+        </geometry>
+        <!-- Pose relative to parent link -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+
+    <!-- Inertial properties -->
+    <inertial>
+        <mass>1</mass>
+        <inertia>
+            <ixx>0.0043333</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0043333</iyy>
+            <iyz>0</iyz>
+            <izz>0.008</izz>
+        </inertia>
+        <!-- Pose relative to link origin -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </inertial>
+</link>
+
+  <link name="arm_hand_3">
+    <!-- Visual properties -->
+    <visual name="visual">
+        <geometry>
+            <cylinder>
+                <radius>0.025</radius> 
+                <length>0.285</length>
+            </cylinder>
+        </geometry>
+        <material>
+            <ambient>1.0 1.0 1.0 1</ambient>
+            <diffuse>1.0 1.0 1.0 1</diffuse>
+            <specular>1.0 1.0 1.0 1</specular>
+        </material>
+        <!-- Pose relative to parent link -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+
+    <!-- Collision properties -->
+    <collision name="collision">
+        <geometry>
+            <cylinder>
+                <radius>0.025</radius>
+                <length>0.285</length>
+            </cylinder>
+        </geometry>
+        <!-- Pose relative to parent link -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+
+    <!-- Inertial properties -->
+    <inertial>
+        <mass>1</mass>
+        <inertia>
+            <ixx>0.0043333</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0043333</iyy>
+            <iyz>0</iyz>
+            <izz>0.008</izz>
+        </inertia>
+        <!-- Pose relative to link origin -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </inertial>
+</link>
+
+  <link name="arm_gripper">
+    <!-- Visual properties -->
+    <visual name="visual">
+        <geometry>
+            <cylinder>
+                <radius>0.025</radius> 
+                <length>0.1</length>
+            </cylinder>
+        </geometry>
+        <material>
+            <ambient>1.0 1.0 0.0 1</ambient>
+            <diffuse>1.0 1.0 0.0 1</diffuse>
+            <specular>1.0 1.0 0.0 1</specular>
+        </material>
+        <!-- Pose relative to parent link -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+
+    <!-- Collision properties -->
+    <collision name="collision">
+        <geometry>
+            <cylinder>
+                <radius>0.025</radius>
+                <length>0.1</length>
+            </cylinder>
+        </geometry>
+        <!-- Pose relative to parent link -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+
+    <!-- Inertial properties -->
+    <inertial>
+        <mass>1</mass>
+        <inertia>
+            <ixx>0.0043333</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0043333</iyy>
+            <iyz>0</iyz>
+            <izz>0.008</izz>
+        </inertia>
+        <!-- Pose relative to link origin -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </inertial>
+</link>
+
+  <link name="arm_hand_3_ext">
+    <!-- Visual properties -->
+    <visual name="visual">
+        <geometry>
+            <cylinder>
+                <radius>0.03</radius> 
+                <length>0.05</length>
+            </cylinder>
+        </geometry>
+        <material>
+            <ambient>1.0 1.0 0.0 1</ambient>
+            <diffuse>1.0 1.0 0.0 1</diffuse>
+            <specular>1.0 1.0 0.0 1</specular>
+        </material>
+        <!-- Pose relative to parent link -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+
+    <!-- Collision properties -->
+    <collision name="collision">
+        <geometry>
+            <cylinder>
+                <radius>0.03</radius>
+                <length>0.05</length>
+            </cylinder>
+        </geometry>
+        <!-- Pose relative to parent link -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+
+    <!-- Inertial properties -->
+    <inertial>
+        <mass>1</mass>
+        <inertia>
+            <ixx>0.0043333</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0043333</iyy>
+            <iyz>0</iyz>
+            <izz>0.008</izz>
+        </inertia>
+        <!-- Pose relative to link origin -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </inertial>
+</link>
+
+  <link name="camera_link">
+  <!-- Visual and Collision -->
+  <visual>
+    <!-- Visual representation of the camera -->
+    <geometry>
+      <box size="0.05 0.05 0.05"/>
+    </geometry>
+    <material name="white"/>
+  </visual>
+  <collision>
+    <!-- Collision representation of the camera -->
+    <geometry>
+      <box size="0.05 0.05 0.05"/>
+    </geometry>
+  </collision>
+
+  <!-- Inertial -->
+  <inertial>
+    <mass value="0.01"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+  </inertial>
+
+  <!-- Camera Sensor -->
+  <sensor name="camera_sensor" type="camera">
+    <visualize>true</visualize>
+    <update_rate>30</update_rate>
+    <camera>
+      <horizontal_fov>1.3962634</horizontal_fov> <!-- ~80 degrees -->
+      <image>
+        <width>640</width>
+        <height>480</height>
+        <format>R8G8B8</format>
+      </image>
+      <clip>
+        <near>0.01</near>
+        <far>100</far>
+      </clip>
+    </camera>
+  </sensor>
+</link>
+
+
+<joint name="leftf_wheel_joint" type="revolute">
+  <parent link="chassis"/>
+  <child link="left_front_wheel"/>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <axis xyz="0 1 0"/>
+  <limit effort="1000.0" velocity="100.0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+</joint>
+
+<joint name="rigthf_wheel_joint" type="revolute">
+  <parent link="chassis"/>
+  <child link="right_front_wheel"/>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <axis xyz="0 1 0"/>
+  <limit effort="1000.0" velocity="100.0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+</joint>
+
+<joint name="leftb_wheel_joint" type="revolute">
+  <parent link="chassis"/>
+  <child link="left_back_wheel"/>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <axis xyz="0 1 0"/>
+  <limit effort="1000.0" velocity="100.0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+</joint>
+
+<joint name="rightb_wheel_joint" type="revolute">
+  <parent link="chassis"/>
+  <child link="right_back_wheel"/>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <axis xyz="0 1 0"/>
+  <limit effort="1000.0" velocity="100.0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+</joint>
+
+<joint name="arm_base_joint" type="revolute">
+  <parent link="chassis"/>
+  <child link="arm_base"/>
+  <origin xyz="0.4 0 0.435" rpy="0 0 0"/>
+  <axis xyz="0 0 1"/>
+  <limit lower="-3.1416" upper="3.1416"/>
+  <dynamics damping="0.0" friction="0.0"/>
+</joint>
+
+<joint name="arm_joint_2" type="revolute">
+  <parent link="arm_base"/>
+  <child link="arm_hand_2"/>
+  <origin xyz="0.2 0 0.175" rpy="0 1.5707 0"/>
+  <axis xyz="1 0 0"/>
+  <limit lower="-3.1416" upper="3.1416"/>
+  <dynamics damping="0.0" friction="0.0"/>
+</joint>
+
+<joint name="arm_joint_3" type="revolute">
+  <parent link="arm_hand_3_ext"/>
+  <child link="arm_hand_3"/>
+  <origin xyz="0.0 0 0.2" rpy="0 -1.5707 0"/>
+  <axis xyz="0 0 1"/>
+  <limit lower="-3.1416" upper="3.1416"/>
+  <dynamics damping="0.0" friction="0.0"/>
+</joint>
+
+<joint name="gripper_joint" type="revolute">
+  <parent link="arm_hand_3"/>
+  <child link="gripper"/>
+  <origin xyz="0.0 0 -0.1425" rpy="0 -1.5707 0"/>
+  <axis xyz="0 0 1"/>
+  <limit lower="-3.1416" upper="3.1416"/>
+  <dynamics damping="0.0" friction="0.0"/>
+</joint>
+
+<joint name="fixed_joint_hand2" type="fixed">
+    <parent>arm_hand_2</parent>
+    <child>arm_hand_3_ext</child>
+</joint>
+
+<joint name="front_depth_camera_joint" type="fixed">
+    <parent>chassis</parent>
+    <child>front_depth_camera</child>
+    <origin xyz="0.40 0.5 0.4" rpy="0 0 0"/>
+</joint>
+
+<joint name="front_camera_joint" type="fixed">
+    <parent>chassis</parent>
+    <child>front_camera</child>
+    <origin xyz="0.40 0.40 0.3" rpy="0 0 0"/>
+</joint>
+
+</robot>
+

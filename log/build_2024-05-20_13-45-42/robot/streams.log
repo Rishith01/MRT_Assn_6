@@ -1,0 +1,28 @@
+[0.341s] Invoking command in '/home/rishith/MRT/MRT_Assignment_6/src/robot': PYTHONPATH=/home/rishith/MRT/MRT_Assignment_6/build/robot/prefix_override:/home/rishith/MRT/MRT_Assignment_6/install/robot/lib/python3.10/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/robot build --build-base /home/rishith/MRT/MRT_Assignment_6/build/robot/build install --record /home/rishith/MRT/MRT_Assignment_6/build/robot/install.log --single-version-externally-managed install_data
+[0.453s] running egg_info
+[0.454s] writing ../../build/robot/robot.egg-info/PKG-INFO
+[0.454s] writing dependency_links to ../../build/robot/robot.egg-info/dependency_links.txt
+[0.454s] writing entry points to ../../build/robot/robot.egg-info/entry_points.txt
+[0.454s] writing requirements to ../../build/robot/robot.egg-info/requires.txt
+[0.454s] writing top-level names to ../../build/robot/robot.egg-info/top_level.txt
+[0.455s] reading manifest file '../../build/robot/robot.egg-info/SOURCES.txt'
+[0.456s] writing manifest file '../../build/robot/robot.egg-info/SOURCES.txt'
+[0.456s] running build
+[0.456s] running build_py
+[0.456s] running install
+[0.456s] running install_lib
+[0.456s] running install_data
+[0.456s] copying package.xml -> /home/rishith/MRT/MRT_Assignment_6/install/robot/share/robot
+[0.457s] creating /home/rishith/MRT/MRT_Assignment_6/install/robot/share/robot/models
+[0.457s] copying models/models.sdf -> /home/rishith/MRT/MRT_Assignment_6/install/robot/share/robot/models
+[0.457s] creating /home/rishith/MRT/MRT_Assignment_6/install/robot/share/robot/launch
+[0.457s] copying launch/gazebo.launch.py -> /home/rishith/MRT/MRT_Assignment_6/install/robot/share/robot/launch
+[0.457s] creating /home/rishith/MRT/MRT_Assignment_6/install/robot/share/robot/urdf
+[0.457s] copying urdf/models.urdf -> /home/rishith/MRT/MRT_Assignment_6/install/robot/share/robot/urdf
+[0.457s] running install_egg_info
+[0.458s] removing '/home/rishith/MRT/MRT_Assignment_6/install/robot/lib/python3.10/site-packages/robot-0.0.0-py3.10.egg-info' (and everything under it)
+[0.458s] Copying ../../build/robot/robot.egg-info to /home/rishith/MRT/MRT_Assignment_6/install/robot/lib/python3.10/site-packages/robot-0.0.0-py3.10.egg-info
+[0.459s] running install_scripts
+[0.471s] Installing moving_circle script to /home/rishith/MRT/MRT_Assignment_6/install/robot/lib/robot
+[0.471s] writing list of installed files to '/home/rishith/MRT/MRT_Assignment_6/build/robot/install.log'
+[0.486s] Invoked command in '/home/rishith/MRT/MRT_Assignment_6/src/robot' returned '0': PYTHONPATH=/home/rishith/MRT/MRT_Assignment_6/build/robot/prefix_override:/home/rishith/MRT/MRT_Assignment_6/install/robot/lib/python3.10/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/robot build --build-base /home/rishith/MRT/MRT_Assignment_6/build/robot/build install --record /home/rishith/MRT/MRT_Assignment_6/build/robot/install.log --single-version-externally-managed install_data
