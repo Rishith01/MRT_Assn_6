@@ -6,11 +6,10 @@ from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    package_name = 'four_wheel_robot'
+    package_name = 'robot'
     pkg_share = get_package_share_directory(package_name)
 
-    # Use xacro to process the URDF file
-    xacro_file = os.path.join(pkg_share, 'urdf', 'robot.urdf.xacro')
+    urdf_file = os.path.join(pkg_share, 'urdf', 'robot.urdf')
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     rviz_config_file = os.path.join(pkg_share, 'configs', 'robot_config.rviz')
 
@@ -23,7 +22,7 @@ def generate_launch_description():
         Node(
             package='gazebo_ros',
             executable='spawn_entity.py',
-            arguments=['-entity', 'four_wheel_robot', '-file', xacro_file],
+            arguments=['-entity', 'four_wheel_robot', '-file', urdf_file],
             output='screen'),
 
         Node(

@@ -1,0 +1,64 @@
+background_color: 0.0, 0.0, 0.0
+
+displays:
+  -
+    name: "RobotModel"
+    type: "rviz2/RobotModel"
+    robot_description: "$(arg robot_description)"
+    visual: true
+    collision: false
+    tf_prefix: ""
+    tf_time: 0
+    update_rate: 50
+    color_scheme: "fixed"
+    alpha: 1.0
+
+  -
+    name: "TF"
+    type: "rviz2/TF"
+    update_rate: 50
+    tf_time: 5.0
+
+  -
+    name: "Grid"
+    type: "rviz2/Grid"
+    cell_count: 20
+    color: 0.5, 0.5, 0.5
+
+  -
+    name: "Axes"
+    type: "rviz2/Axes"
+    length: 1.0
+    radius: 0.05
+
+  -
+    name: "LaserScan"
+    type: "rviz2/LaserScan"
+    topic: "/scan"
+    color: 1.0, 0.0, 0.0
+    alpha: 1.0
+    decay_time: 0.1
+    queue_size: 10
+
+  -
+    name: "PointCloud2"
+    type: "rviz2/PointCloud2"
+    topic: "/points"
+    color: 0.0, 1.0, 0.0
+    alpha: 1.0
+    decay_time: 0.1
+    queue_size: 10
+
+  -
+    name: "Image"
+    type: "rviz2/Image"
+    topic: "/image"
+    queue_size: 10
+    transport_type: "raw"
+
+  -
+    name: "Marker"
+    type: "rviz2/Marker"
+    topic: "/marker"
+    queue_size: 10
+
